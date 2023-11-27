@@ -1,6 +1,8 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 
+import '../resources/bot.dart';
+
 class TicTacToe extends StatefulWidget {
   const TicTacToe({super.key, this.singlePlayer = false, this.player2name = ""});
 
@@ -45,6 +47,14 @@ class _TicTacToeState extends State<TicTacToe> {
       appBar: AppBar(
         title: const Text('Tic Tac Toe'),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.restart_alt),
+            onPressed: () => Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => TicTacToe(singlePlayer: widget.singlePlayer, player2name: widget.singlePlayer ? botNames[Random().nextInt(botNames.length)] : "")),
+            ),
+          )
+        ],
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
