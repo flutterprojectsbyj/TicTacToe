@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:tictactoe/pages/about.dart';
 import 'package:tictactoe/pages/tic_tac_toe.dart';
 import 'package:tictactoe/resources/bot.dart';
 
@@ -52,6 +53,18 @@ class Menu extends StatelessWidget {
             ),
           ),
         ]),
+      ),
+      floatingActionButton: Align(
+        alignment: Alignment.bottomCenter,
+        child: FloatingActionButton(
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => const AboutPage()),
+            );
+          },
+          backgroundColor: Colors.transparent,
+          child: const Text("About")
+        ),
       ),
     );
   }
