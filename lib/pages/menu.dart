@@ -54,6 +54,7 @@ class Menu extends StatelessWidget {
           ),
         ]),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: Align(
         alignment: Alignment.bottomCenter,
         child: FloatingActionButton(
