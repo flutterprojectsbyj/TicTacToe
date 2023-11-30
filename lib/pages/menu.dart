@@ -63,6 +63,7 @@ class Menu extends StatelessWidget {
             );
           },
           backgroundColor: Colors.transparent,
+          elevation: 0,
           child: const Text("About")
         ),
       ),

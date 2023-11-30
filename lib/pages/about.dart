@@ -53,6 +53,7 @@ class AboutPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).pop(),
         backgroundColor: Colors.transparent,
+        elevation: 0,
         child: const Icon(Icons.arrow_back, color: Colors.white,),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
